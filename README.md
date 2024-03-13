@@ -7,6 +7,7 @@ Este proyecto simula el rol de un analista de datos trabajando en un estudio par
 Como producto final, se espera un tablero interactivo que facilite la intepretación y análisis de la información, acompañado de reporte de las tareas realizadas, las metodologias adoptadas y las principales conclusiones obtenidas.
 
 ## Contexto
+Los siniestros viales, también denominados incidentes de tráfico, siniestros viales o accidentes de tránsito, representan situaciones donde vehículos se ven involucrados en espacios públicos. Estos eventos pueden ser desencadenados por diversas causas, como colisiones entre automóviles, motocicletas, bicicletas o peatones, atropellos, impactos contra objetos fijos o incluso caídas de vehículos. Las consecuencias abarcan desde daños materiales hasta lesiones graves o, lamentablemente, pérdidas fatales para los afectados. Los siniestros viales son una preocupación importante en la Ciudad Autónoma de Buenos Aires debido al alto volumen de tráfico y la densidad poblacional. 
 
 ## Datos 
 
@@ -45,6 +46,36 @@ A siniestros_hechos se agregan las siguientes columnas:
 Posteriormente, se procedió a realizar un análisis exploratorio exahustivo (EDA), con la finalidad de encontrar patrones que permitan generar información que le permita a las autoridades locales tomar medidas para disminuir la cantidad de víctimas fatales de los siniestros viales. Todos los detalles de este análisis se encuentran [aquí](/notebooks/02_EDA.ipynb).
 
 ## Análisis de Datos
+#### Siniestros viales, visión general
+![KPI](imagenes/tablero_s.png)
+-   Observaciones:
+    * El 82% de los siniestros ocurren en vias de tipo calle
+    * La mayoría de las víctimas tiene entre 20 y 39 años
+    * Los siniestros viales tienden a ocurrir en la tarde y en dia viernes
+    * Los particpantes más comunes son: Moto como víctima y Auto como acusado. 
+    * El 67% de las victimas son  varones
+    * Tan solo el 18% de los siniestros ocurrió en un cruce
+    * El 40% ocurrió en un semáforo. 
+#### Siniestros viales: Homicidios
+![KPI](imagenes/tablero_h.png)
+-   Observaciones:
+    * El 63% de los homicidios ocurren en vias de tipo avenida
+    * La mayoría de las víctimas tiene entre 20 y 39 años
+    * Los accidentes mortales tienden a ocurrir entre las 6 y las 7:59 de la mañana y en fin de semana
+    * Los particpantes más comunes son: Moto como víctima y Auto como acusado. 
+    * El 72% de las victimas mortales son varones
+    * El 77% ocurrió en un cruce
+    * El 45% ocurrió en un semáforo. 
+#### Siniestros viales: Lesiones
+![KPI](imagenes/tablero_l.png)
+-   Observaciones:
+    * El 84% de los siniestros ocurren en vias de tipo calle
+    * La mayoría de las víctimas tiene entre 20 y 39 años
+    * Los siniestros viales tienden a ocurrir en la tarde y en dia viernes
+    * Los particpantes más comunes son: Moto como víctima y Auto como acusado. 
+    * El 67% de las victimas son varones
+    * Tan solo el 18% de los siniestros ocurrió en un cruce
+    * El 40% ocurrió en un semáforo. 
 
 ## Indicadores Clave de Rendimiento (KPI)
 
@@ -80,14 +111,52 @@ En función de lo analizado en el punto anterior, se plantearon tres objetivos e
 
     En primer lugar se calculó la *Tasa de homicidios en las cruces sin semáforo* para el año 2020, la cual resultó en 1.68. De esta se pudo determinar el objetivo a cumplir al año siguiente, que resultó en **0,61** (es decir, la reducción del 10% de la tasa de homicios respecto del 2020). Finalmente, al calcular la *Tasa de homicidios en las cruces sin semáforo* para el año 2021, la misma resultó de 0,32, lo que significa que se se logró el objetivo, reduciendo en 43,47% la tasa de mocidios en cruces sin semáforo respecto al año anterior.
 
+### Nota:
+La población de CABA para el año 2021 es de 3,078,836 habitantes en una superficie de 200 km². Este dato fue obtenido la Dirección General de [Estadísticas y Censos | Buenos Aires Ciudad](https://www.estadisticaciudad.gob.ar/eyc/?cat=132) 
 
 En la siguiente imagen se aprecian los rendimientos de los tres KPI propuestos.
 
 ![KPI](imagenes/kpi.png)
 
 
-
 ## Conclusiones y Recomendaciones
+
+- Los siniestros viales son un problema grave en la Ciudad Autónoma de Buenos Aires, con un alto número de víctimas fatales y lesionados.
+- Los motociclistas son los participantes más vulnerables en el tránsito, con una alta tasa de mortalidad.
+- Los cruces sin semáforo son un punto crítico de riesgo para los peatones y los conductores.
+- Se ha logrado un avance significativo en la reducción de la tasa de homicidios en siniestros viales en el último año.
+- Se ha logrado una reducción en la cantidad de accidentes mortales de motociclistas en el último año.
+- Se ha logrado una reducción en la tasa de homicidios en cruces sin semáforo en el último año.
+
+### Recomendaciones:
+
+- Implementar medidas para mejorar la seguridad vial, como:
+
+    * Reducir la velocidad máxima permitida en las calles.
+    * Implementar más y mejores controles de tránsito.
+    * Realizar campañas de concientización vial.
+    * Mejorar la infraestructura vial, como:
+    * Construir más ciclovías.
+    * Reparar baches y mejorar la señalización.
+    * Instalar más semáforos en cruces conflictivos.
+    * Fortalecer la atención a las víctimas de siniestros viales, brindándoles apoyo médico, psicológico y social.
+
+- Continuar con el monitoreo de los indicadores de seguridad vial y realizar ajustes en las medidas implementadas en función de los resultados obtenidos.
+
+### Reflexiones:
+
+Es importante destacar que la seguridad vial es una responsabilidad compartida entre todos los actores del tránsito: conductores, peatones, ciclistas y autoridades. Es fundamental que todos tomemos conciencia de la importancia de respetar las normas de tránsito y de conducir con responsabilidad para evitar siniestros viales.
+
+### Consideraciones adicionales
+
+Se podrían realizar análisis más específicos para identificar los factores de riesgo asociados a los siniestros viales.
+Se podrían desarrollar modelos predictivos para identificar las zonas con mayor riesgo de siniestros viales.
+Se podrían utilizar herramientas de visualización de datos para comunicar de manera más efectiva los resultados del análisis a las autoridades y al público en general.
+
+____
+
+Por Gabriel Rojas M. | Marzo 2024
+
 
 
 
